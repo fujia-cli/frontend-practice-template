@@ -5,11 +5,70 @@
 </div>
 
 <div align="center">
-  <h1>frontend-practice-template</h1>
+  <h1>@fujia/frontend-practice-template</h1>
 </div>
 
 <div align="center">
 
-write project description...
+Talk is cheap, Show me the code.
 
 </div>
+
+## Getting started
+
+At first, you can install the cli tools by following commands:
+
+```sh
+npm i -g @fujia/cli-core
+
+# or using yarn
+yarn global add @fujia/cli-core
+```
+
+then, to initial a project with the template via above cli tools:
+
+```sh
+# step1. create project folder
+mkdir [project name]; cd $_;
+
+# step2. initial project via the template
+stage init
+
+# step3. select "default" option.
+
+# step4. select "app" option.
+
+# step5. entering project name and version.
+
+# step3. select "electron-react-webpack" option.
+```
+
+of course, if you don't want to install @fujia/cli-core in global scope, it can initial a project quickly by following commands:
+
+```sh
+# step1. create project folder
+mkdir [project name]; cd $_;
+
+# step2. initial project via the template
+npm init stage@latest
+
+# the other steps follow above.
+```
+
+That's all, the project will install the dependencies and devDependencies, then running automatically.
+
+### Starting Development
+
+1. Start the app in the dev environment:
+
+```sh
+npm run dev
+```
+
+## Maintainers
+
+- [fujia](https://github.com/fushenguang)
+
+## License
+
+MIT © [frontend-practice-template](https://github.com/fujia-cli/frontend-practice-template)
