@@ -20,9 +20,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fujia-cli/frontend-practice-template.git"
+  },
   "author": {
     "name": "fujia",
-    "url": "git+https@github.com:fujia-cli/frontend-practice-template.git",
     "email": "fujia.site@outlook.com"
   },
   "license": "MIT",
