@@ -55,5 +55,8 @@
     "webpack-manifest-plugin": "^5.0.0",
     "webpack-merge": "^5.8.0",
     "xml-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "@fujia/check-path": "^1.2.0"
   }
 }

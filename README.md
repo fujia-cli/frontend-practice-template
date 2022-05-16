@@ -38,6 +38,16 @@ stage init
 
 # step4. input the template info.
 
+# if we want to add custom template, e.g.
+
+# ? Please select the template type: custom
+# ? there is no custom template, whether to create one now: Yes
+# ? please input template name: frontend-practice
+# ? please input the template corresponding package name: @fujia/frontend-practice-template
+# ? please input the template version: latest
+# ? please input template install command: yarn
+# ? please input template start command: npm run dev
+
 ```
 
 of course, if you don't want to install @fujia/cli-core in global scope, it can initial a project quickly by following commands:
