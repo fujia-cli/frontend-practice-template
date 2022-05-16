@@ -36,19 +36,28 @@ function genMultiEntryAndPlugin(
 
       result.entry[pageName] = entryPath;
 
+      let outputFileName;
+
+      if (pageName === "index") {
+        outputFileName = path.resolve(__dirname, `../dist/${defaultHtmlName}`);
+      } else {
+        outputFileName = path.resolve(
+          __dirname,
+          `../dist/${pageName}/${defaultHtmlName}`
+        );
+      }
+
       result.plugins.push(
         new HtmlWebpackPlugin({
           chunks: [pageName],
           template: htmlPath,
-          filename: path.resolve(
-            __dirname,
-            `../dist/${pageName}/${defaultHtmlName}`
-          ),
+          filename: outputFileName,
           inject: "body",
           minify: false,
         })
       );
     }
+
     console.log();
     console.log(
       `The available pages are: ${Object.keys(result.entry).join(", ")}.`

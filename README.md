@@ -34,13 +34,10 @@ mkdir [project name]; cd $_;
 # step2. initial project via the template
 stage init
 
-# step3. select "default" option.
+# step3. select "custom" option.
 
-# step4. select "app" option.
+# step4. input the template info.
 
-# step5. entering project name and version.
-
-# step3. select "electron-react-webpack" option.
 ```
 
 of course, if you don't want to install @fujia/cli-core in global scope, it can initial a project quickly by following commands:
