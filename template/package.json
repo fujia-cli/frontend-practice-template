@@ -1,0 +1,59 @@
+{
+  "name": "<%= packageName %>",
+  "version": "<%= version %>",
+  "description": "show me the code",
+  "keywords": [
+    "frontend",
+    "javascript",
+    "node.js",
+    "esnext"
+  ],
+  "scripts": {
+    "build": "webpack --config ./build/webpack.prod.js",
+    "watch": "webpack --watch --config ./build/webpack.dev.js",
+    "dev": "webpack-dev-server --config ./build/webpack.dev.js",
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "author": {
+    "name": "",
+    "url": "",
+    "email": ""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^16.3.0",
+    "@commitlint/config-conventional": "^16.2.4",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.7.1",
+    "csv-loader": "^3.0.3",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "semver": "^7.3.7",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0",
+    "webpack-manifest-plugin": "^5.0.0",
+    "webpack-merge": "^5.8.0",
+    "xml-loader": "^1.2.1"
+  }
+}

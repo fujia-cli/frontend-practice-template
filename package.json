@@ -1,0 +1,34 @@
+{
+  "name": "@fujia/frontend-practice-template",
+  "version": "0.1.0",
+  "description": "talk is cheap, show me the code",
+  "keywords": [
+    "frontend",
+    "template",
+    "code",
+    "stage"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "fujia",
+    "url": "git+https@github.com:fujia-cli/frontend-practice-template.git",
+    "email": "fujia.site@outlook.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^16.3.0",
+    "@commitlint/config-conventional": "^16.2.4",
+    "husky": "^7.0.4"
+  }
+}
