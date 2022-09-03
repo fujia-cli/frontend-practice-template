@@ -67,6 +67,10 @@ module.exports = {
         exclude: /\.module\.s?(c|a)ss$/,
       },
       {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+      {
         test: /\.(png|svg|jpg|gif)$/,
         use: ["file-loader"],
       },
