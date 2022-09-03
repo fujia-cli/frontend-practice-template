@@ -23,8 +23,10 @@ const LOWEST_NODE_VERSION = "14.0.0";
 
 const { genMultiEntryAndPlugin } = require("./utils");
 
+const entriesAndPlugins = genMultiEntryAndPlugin();
+
 module.exports = {
-  entry: genMultiEntryAndPlugin().entry,
+  entry: entriesAndPlugins.entry,
   output: {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "../dist"),
@@ -84,7 +86,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    ...genMultiEntryAndPlugin().plugins,
+    ...entriesAndPlugins.plugins,
     new CopyWebpackPlugin({
       patterns: [
         {
