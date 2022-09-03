@@ -12,8 +12,10 @@
     "build": "webpack --config ./build/webpack.prod.js",
     "watch": "webpack --watch --config ./build/webpack.dev.js",
     "dev": "webpack-dev-server --config ./build/webpack.dev.js",
+    "generate": "node ./scripts/index.js",
     "prepare": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create": ""
   },
   "commitlint": {
     "extends": [
@@ -39,6 +41,7 @@
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
     "csv-loader": "^3.0.3",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.1",
     "rimraf": "^3.0.2",
@@ -57,6 +60,10 @@
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
-    "@fujia/check-path": "^1.2.0"
+    "@fujia/check-path": "^1.2.0",
+    "colors": "^1.4.0",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.0.0",
+    "terminal-link": "2.1.1"
   }
 }

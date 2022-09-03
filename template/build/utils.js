@@ -4,6 +4,12 @@ const path = require("path");
 const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { pathExistSync } = require("@fujia/check-path");
+const tLink = require("terminal-link");
+const colors = require("colors");
+
+const { SERVER_PORT } = require("./constants");
+
+const HOMO_URL_PATH = "index";
 
 function genMultiEntryAndPlugin(
   entryName = "app.ts",
@@ -21,7 +27,10 @@ function genMultiEntryAndPlugin(
     });
 
     for (const pageDir of pages) {
-      if (!pageDir.isDirectory()) break;
+      /**
+       * NOTE: Please distinguish between "break" and "continue" key words in for...of loop.
+       */
+      if (!pageDir.isDirectory()) continue;
 
       const pageName = pageDir.name;
       const entryPath = path.resolve(pagePath, `${pageName}/${entryName}`);
@@ -31,7 +40,7 @@ function genMultiEntryAndPlugin(
         console.error(
           `The page should provide both ${entryPath} and ${htmlPath} files`
         );
-        break;
+        continue;
       }
 
       result.entry[pageName] = entryPath;
@@ -58,11 +67,23 @@ function genMultiEntryAndPlugin(
       );
     }
 
+    const allPages = Object.keys(result.entry);
+
     console.log();
-    console.log(
-      `The available pages are: ${Object.keys(result.entry).join(", ")}.`
-    );
+    console.log("The available pages and page urls as below: ");
     console.log();
+    allPages.forEach((p) => {
+      const formatPath = p === HOMO_URL_PATH ? "" : `/${p}`;
+
+      const link = tLink(
+        `http://127.0.0.1:${SERVER_PORT}${formatPath}`,
+        `http://127.0.0.1:${SERVER_PORT}${formatPath}`
+      );
+
+      console.log(` ${p}: `, colors.blue(link));
+    });
+    console.log();
+
     return result;
   } catch (err) {
     console.error(err);
