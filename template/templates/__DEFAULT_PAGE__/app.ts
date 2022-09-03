@@ -5,7 +5,9 @@
  *
  * Most of the time, we don't need it. Please ignore it.
  */
-//import './index.html';
+// if (process.env.NODE_ENV !== 'production') {
+//   require('./index.html');
+// }
 
 export const sayHi = (name: string) => `Hello, ${name}!`;
 
